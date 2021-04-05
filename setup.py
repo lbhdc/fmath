@@ -7,7 +7,7 @@ fmath = Extension(
     sources,
     include_dirs=".",
     language="c++",
-    extra_compile_args=["-O3"]
+    extra_compile_args=["-O3", "-march=native"]
 )
 
 cmd = {"build_ext": build_ext, "language_level": 3}
