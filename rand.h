@@ -3,6 +3,7 @@
 
 #include <cstdint>
 #include <cstdfloat>
+#include "magic.h"
 
 namespace fmath {
 namespace xorshf {
