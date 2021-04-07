@@ -6,15 +6,15 @@
 
 namespace fmath {
 template <typename R>
-static constexpr R bitmask(const uint64_t onecount) {
+static constexpr R bitmask(const uint64_t onecount) noexcept {
   return static_cast<R>(-(onecount != 0)) & (static_cast<R>(-1) >> ((sizeof(R) * CHAR_BIT - onecount)));
 }
 
-constexpr uint64_t merge(uint64_t a, uint64_t b, uint64_t mask) {
+constexpr uint64_t merge(uint64_t a, uint64_t b, uint64_t mask) noexcept {
   return a ^ ((a ^ b) & mask);
 }
 
-constexpr uint32_t reverse_bits(uint32_t v) {
+constexpr uint32_t reverse_bits(uint32_t v) noexcept {
   v = ((v >> 1) & 0x55555555) | ((v & 0x55555555) << 1);
   v = ((v >> 2) & 0x33333333) | ((v & 0x33333333) << 2);
   v = ((v >> 4) & 0x0F0F0F0F) | ((v & 0x0F0F0F0F) << 4);
