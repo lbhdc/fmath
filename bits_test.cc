@@ -3,8 +3,8 @@
 
 namespace {
 TEST(bits, merge) {
-  auto a = 0b00000000000000000000000000000000;
-  auto b = 0b11111111111111111111111111111111;
+  auto a = 0b00000000000000000000000000000000U;
+  auto b = 0b11111111111111111111111111111111U;
   auto mask = fmath::bitmask<unsigned int>(16);
   ASSERT_EQ(fmath::merge(a, b, mask), mask);
 
