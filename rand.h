@@ -2,15 +2,16 @@
 #define FMATH_RAND_H
 
 #include <cstdint>
-#include <cstdfloat>
 #include "magic.h"
 
 namespace fmath {
 namespace xorshf {
-static uint64_t x = 123456789, y = 362436069, z = 521288629;
+static uint64_t x = 123456789;
+static uint64_t y = 362436069;
+static uint64_t z = 521288629;
 
-constexpr uint64_t xorshf96() noexcept {
-  auto t;
+inline uint64_t xorshf96() noexcept {
+  uint64_t t;
   x ^= x << 16;
   x ^= x >> 5;
   x ^= x << 1;
@@ -29,7 +30,7 @@ static constexpr uint64_t rotl(const uint64_t x, int k) noexcept {
   return (x << k) | (x >> (64 - k));
 }
 
-constexpr double uniform() noexcept {
+inline double uniform() noexcept {
   const auto s0 = s[0];
   auto s1 = s[1];
   const auto result = s0 + s1;

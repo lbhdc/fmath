@@ -6,7 +6,7 @@ set(CMAKE_CXX_STANDARD 20)
 # [ source sets ]
 set(headers lib.h lib.cc floats.h magic.h bits.h rand.h)
 set(src lib.cc)
-set(test_src tester.cc lib_test.cc floats_test.cc bits_test.cc)
+set(test_src tester.cc lib_test.cc floats_test.cc bits_test.cc rand_test.cc)
 
 # [ artifacts ]
 add_library(fmath SHARED ${headers} ${src})
