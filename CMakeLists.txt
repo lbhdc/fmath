@@ -4,12 +4,13 @@ project(fmath)
 set(CMAKE_CXX_STANDARD 20)
 
 # [ source sets ]
-set(src lib.h lib.cc floats.h magic.h bits.h)
+set(headers lib.h lib.cc floats.h magic.h bits.h rand.h)
+set(src lib.cc)
 set(test_src tester.cc lib_test.cc floats_test.cc bits_test.cc)
 
 # [ artifacts ]
-add_library(fmath SHARED ${src})
-add_executable(tester ${test_src})
+add_library(fmath SHARED ${headers} ${src})
+add_executable(tester ${headers} ${test_src})
 
 # [ dependencies ]
 find_package(GTest 1.10 REQUIRED)
