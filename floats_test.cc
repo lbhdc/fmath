@@ -28,6 +28,11 @@ TEST(floats, neg) {
   ASSERT_EQ(fmath::neg(1.0f), -1.0f);
 }
 
+TEST(floats, newton_raphson) {
+  ASSERT_EQ(fmath::newton_raphson(1.0f, 1.0f), 1.0f);
+  ASSERT_EQ(fmath::newton_raphson(2.0f, 4.0f), 2.25f);
+}
+
 TEST(floats, pow) {
   ASSERT_EQ(fmath::pow(2.0f, 2.0f), 4.0f);
   ASSERT_EQ(fmath::pow(4.0f, 0.5f), 2.0f);
