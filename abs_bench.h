@@ -1,3 +1,6 @@
+#ifndef FMATH_ABS_BENCH_H
+#define FMATH_ABS_BENCH_H
+
 #include <benchmark/benchmark.h>
 #include <cmath>
 #include "abs.h"
@@ -15,3 +18,5 @@ static void std_abs(benchmark::State& state) {
   }
 }
 }
+
+#endif //FMATH_EXP_BENCH_H

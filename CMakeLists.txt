@@ -8,15 +8,15 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(headers lib.h lib.cc magic.h bits.h rand.h concept.h sign.h min.h max.h
     numeric.h abs.h div.h cast.h exp.h log.h pow.h round.h rsqrt.h sqrt.h)
 set(src lib.cc)
-set(bench_src bencher.cc abs_bench.h)
-set(test_src tester.cc bits_test.cc rand_test.cc sign_test.cc min_test.cc
+set(bench_headers abs_bench.h exp_bench.h log_bench.h max_bench.h)
+set(test_src bits_test.cc rand_test.cc sign_test.cc min_test.cc
     max_test.cc numeric_test.cc abs_test.cc cast_test.cc exp_test.cc log_test.cc
     pow_test.cc round_test.cc rsqrt_test.cc sqrt_test.cc)
 
 # [ artifacts ]
-add_library(fmath SHARED ${headers} ${src})
-add_executable(bencher ${headers} ${bench_src})
-add_executable(tester ${headers} ${test_src})
+add_library(fmath SHARED lib.cc ${headers} ${src})
+add_executable(bencher bencher.cc ${headers} ${bench_headers})
+add_executable(tester tester.cc ${headers} ${test_src})
 
 # [ dependencies ]
 find_package(benchmark REQUIRED)
