@@ -5,14 +5,14 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # [ source sets ] =============================================================-
-set(headers lib.h lib.cc magic.h bits.h rand.h concept.h sign.h min.h max.h
-    numeric.h abs.h div.h cast.h exp.h log.h pow.h round.h rsqrt.h sqrt.h)
+set(headers lib.h abs.h bits.h cast.h concept.h div.h exp.h log.h magic.h max.h
+    min.h numeric.h pow.h rand.h round.h rsqrt.h sign.h sqrt.h)
 set(src lib.cc)
 set(bench_headers abs_bench.h exp_bench.h log_bench.h max_bench.h min_bench.h
     pow_bench.h round_bench.h rsqrt_bench.h sqrt_bench.h)
-set(test_src bits_test.cc rand_test.cc sign_test.cc min_test.cc max_test.cc
-    numeric_test.cc abs_test.cc cast_test.cc exp_test.cc log_test.cc pow_test.cc
-    round_test.cc rsqrt_test.cc sqrt_test.cc)
+set(test_src abs_test.cc bits_test.cc cast_test.cc exp_test.cc log_test.cc
+    max_test.cc min_test.cc numeric_test.cc pow_test.cc rand_test.cc
+    round_test.cc rsqrt_test.cc sign_test.cc  sqrt_test.cc)
 
 # [ artifacts ] ===============================================================-
 add_library(fmath SHARED lib.cc ${headers} ${src})
