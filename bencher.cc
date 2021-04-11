@@ -3,6 +3,7 @@
 #include "exp_bench.h"
 #include "log_bench.h"
 #include "max_bench.h"
+#include "min_bench.h"
 
 using namespace fmath::bench;
 
@@ -16,5 +17,9 @@ BENCHMARK(fm_ceil);
 BENCHMARK(std_ceil);
 BENCHMARK(fm_max);
 BENCHMARK(std_max);
+BENCHMARK(fm_floor);
+BENCHMARK(std_floor);
+BENCHMARK(fm_min);
+BENCHMARK(std_min);
 BENCHMARK_MAIN();
 
