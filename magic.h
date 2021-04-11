@@ -2,6 +2,7 @@
 #define FMATH_MAGIC_H
 
 namespace fmath::magic {
+static constexpr uint64_t     debruijn         = 0x022fdd63cc95386d;
 static constexpr int          lomont_magic_num = 0x5f375a86;
 static constexpr unsigned int negative_zero_f  = 0x80000000;
 static constexpr double       normal_ratio     = (1.0 / 18446744073709551616.0);

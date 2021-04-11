@@ -14,4 +14,12 @@ TEST(bits, merge) {
 TEST(bits, reverse) {
   ASSERT_EQ(fmath::reverse_bits(0b00000000000000001111111111111111), 0b11111111111111110000000000000000);
 }
+
+TEST(bits, swap) {
+  uint64_t a = 0;
+  uint64_t b = 1;
+  fmath::swap(a, b);
+  ASSERT_EQ(a, 1);
+  ASSERT_EQ(b, 0);
+}
 }

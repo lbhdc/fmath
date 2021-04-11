@@ -24,7 +24,7 @@ inline uint64_t xorshf96() noexcept {
 } // xorshf
 
 namespace uniform {
-uint64_t s[2] = {0x41, 0x29837592};
+static uint64_t s[2] = {0x41, 0x29837592};
 
 static constexpr uint64_t rotl(const uint64_t x, int k) noexcept {
   return (x << k) | (x >> (64 - k));

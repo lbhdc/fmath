@@ -38,9 +38,8 @@ constexpr float newton_raphson(float x, float y) noexcept {
 }
 
 inline float pow(float x, float p) noexcept {
-  return as_float(
-    static_cast<unsigned int>(static_cast<int>(p * (static_cast<float>(as_int(x) - magic::one_f)))
-  ) + magic::one_f);
+  return as_float(static_cast<unsigned int>(static_cast<int>(
+    p * (static_cast<float>(as_int(x) - magic::one_f)))) + magic::one_f);
 }
 
 constexpr float round(float v) noexcept {

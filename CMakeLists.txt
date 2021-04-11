@@ -4,9 +4,11 @@ project(fmath)
 set(CMAKE_CXX_STANDARD 20)
 
 # [ source sets ]
-set(headers lib.h lib.cc floats.h magic.h bits.h rand.h)
+set(headers lib.h lib.cc floats.h magic.h bits.h rand.h concept.h sign.h min.h
+    max.h numeric.h abs.h div.h)
 set(src lib.cc)
-set(test_src tester.cc lib_test.cc floats_test.cc bits_test.cc rand_test.cc)
+set(test_src tester.cc floats_test.cc bits_test.cc rand_test.cc sign_test.cc
+    min_test.cc max_test.cc numeric_test.cc abs_test.cc)
 
 # [ artifacts ]
 add_library(fmath SHARED ${headers} ${src})
