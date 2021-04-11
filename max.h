@@ -4,6 +4,7 @@
 #include <climits>
 #include "concept.h"
 #include "min.h"
+#include "numeric.h"
 
 namespace fmath {
 constexpr float ceil(float v) noexcept {
