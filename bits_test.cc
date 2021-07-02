@@ -11,6 +11,10 @@ TEST(bits, merge) {
 
 }
 
+TEST(bits, popcount) {
+  ASSERT_EQ(fmath::pop_count(0xFFFFFFFF), 32);
+}
+
 TEST(bits, reverse) {
   ASSERT_EQ(fmath::reverse_bits(0b00000000000000001111111111111111), 0b11111111111111110000000000000000);
 }

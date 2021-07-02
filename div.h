@@ -1,6 +1,9 @@
 #ifndef FMATH_DIV_H
 #define FMATH_DIV_H
 
+#include "abs.h"
+#include "sign.h"
+
 namespace fmath {
 constexpr int div(int num, int denom) noexcept {
   int s = sign(num) ^ sign(denom);
@@ -13,7 +16,8 @@ constexpr int div(int num, int denom) noexcept {
     ++quotient;
   }
 
-  return s * quotient;
+  // TODO: handle sign
+  return quotient;
 }
 }
 

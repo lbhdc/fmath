@@ -8,10 +8,10 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(headers lib.h abs.h bits.h cast.h concept.h div.h exp.h log.h magic.h max.h
     min.h numeric.h pow.h rand.h round.h rsqrt.h sign.h sqrt.h)
 set(src lib.cc)
-set(bench_headers abs_bench.h exp_bench.h log_bench.h max_bench.h min_bench.h
-    pow_bench.h round_bench.h rsqrt_bench.h sqrt_bench.h)
-set(test_src abs_test.cc bits_test.cc cast_test.cc exp_test.cc log_test.cc
-    max_test.cc min_test.cc numeric_test.cc pow_test.cc rand_test.cc
+set(bench_headers abs_bench.h div_bench.h exp_bench.h log_bench.h max_bench.h
+    min_bench.h pow_bench.h round_bench.h rsqrt_bench.h sqrt_bench.h)
+set(test_src abs_test.cc bits_test.cc cast_test.cc div_test.cc exp_test.cc
+    log_test.cc max_test.cc min_test.cc numeric_test.cc pow_test.cc rand_test.cc
     round_test.cc rsqrt_test.cc sign_test.cc  sqrt_test.cc)
 
 # [ artifacts ] ===============================================================-

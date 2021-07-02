@@ -5,6 +5,7 @@
 #include "sign.h"
 
 namespace fmath {
+/// abs returns the absolute value of a T
 template<Number T>
 constexpr T abs(T v) noexcept {
   const T mask = sign(v);
