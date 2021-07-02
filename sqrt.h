@@ -5,7 +5,7 @@
 #include "magic.h"
 
 namespace fmath {
-inline float sqrt(float f) noexcept {
+constexpr float sqrt(float f) noexcept {
   return as_float((as_int(f) >> 1) + (magic::one_f >> 1));
 }
 }

@@ -5,7 +5,7 @@
 #include "magic.h"
 
 namespace fmath {
-inline float exp2(float f) noexcept {
+constexpr float exp2(float f) noexcept {
   return as_float(static_cast<unsigned int>(f * magic::scale_up) + magic::one_f);
 }
 }

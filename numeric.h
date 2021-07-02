@@ -15,7 +15,7 @@ constexpr bool is_pow2(T v) noexcept {
   return v && !(v & (v - 1));
 }
 
-inline float neg(float f) noexcept {
+constexpr float neg(float f) noexcept {
   return as_float(as_int(f) ^ magic::negative_zero_f);
 }
 

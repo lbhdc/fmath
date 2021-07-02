@@ -9,7 +9,7 @@ constexpr float round(float v) noexcept {
   return floor(v + 0.5f);
 }
 
-inline float roundp(float f, float precision) noexcept {
+constexpr float roundp(float f, float precision) noexcept {
   auto pow10 = pow(10, precision);
   return round(f * pow10) / pow10;
 }

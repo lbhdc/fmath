@@ -5,7 +5,7 @@
 #include "magic.h"
 
 namespace fmath {
-inline float rsqrt(float x) noexcept {
+constexpr float rsqrt(float x) noexcept {
   auto xhalf = 0.5f * x;
   x = as_float(magic::lomont_magic_num - (as_int(x) >> 1));
   return x * (1.5f - xhalf * x * x);
@@ -13,7 +13,7 @@ inline float rsqrt(float x) noexcept {
 
 inline float rsqrt_lomont(float x) noexcept {
   auto xhalf = 0.5f * x;
-  int i = *reinterpret_cast<int *>(&x);
+  int i = as_int(x);
   i = magic::lomont_magic_num - (i >> 1);
   x = *reinterpret_cast<float *>(&i);
   x = x*(1.5f-xhalf*x*x);

@@ -7,7 +7,7 @@
 
 namespace fmath {
 template<Number T>
-inline T log2(T f) noexcept {
+constexpr T log2(T f) noexcept {
   return as_float(as_int(f) - magic::one_f) * magic::scale_down;
 }
 }
