@@ -7,14 +7,16 @@
 
 namespace fmath::bench {
 static void fm_log2(benchmark::State& state) {
+  float x;
   for (auto _ : state) {
-    auto x = fmath::log2(1.0f);
+    benchmark::DoNotOptimize(x = fmath::log2(1.0f));
   }
 }
 
 static void std_log2(benchmark::State& state) {
+  float x;
   for (auto _ : state) {
-    auto x = std::log2(1.0f);
+    benchmark::DoNotOptimize(x = std::log2(1.0f));
   }
 }
 }

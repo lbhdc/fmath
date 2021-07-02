@@ -7,26 +7,30 @@
 
 namespace fmath::bench {
 static void fm_floor(benchmark::State &state) {
+  float x;
   for (auto _ : state) {
-    auto x = fmath::floor(1.1f);
+    benchmark::DoNotOptimize(x = fmath::floor(1.1f));
   }
 }
 
 static void std_floor(benchmark::State &state) {
+  float x;
   for (auto _ : state) {
-    auto x = std::floor(1.1f);
+    benchmark::DoNotOptimize(x = std::floor(1.1f));
   }
 }
 
 static void fm_min(benchmark::State &state) {
+  float x;
   for (auto _ : state) {
-    auto x = fmath::min(1, 2);
+    benchmark::DoNotOptimize(x = fmath::min(1, 2));
   }
 }
 
 static void std_min(benchmark::State &state) {
+  float x;
   for (auto _ : state) {
-    auto x = std::min(1, 2);
+    benchmark::DoNotOptimize(x = std::min(1, 2));
   }
 }
 }

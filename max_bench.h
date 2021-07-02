@@ -7,26 +7,30 @@
 
 namespace fmath::bench {
 static void fm_ceil(benchmark::State& state) {
+  float x;
   for (auto _ : state) {
-    auto x = fmath::ceil(1.1f);
+    benchmark::DoNotOptimize(x = fmath::ceil(1.1f));
   }
 }
 
 static void std_ceil(benchmark::State& state) {
+  float x;
   for (auto _ : state) {
-    auto x = std::ceil(1.1f);
+    benchmark::DoNotOptimize(x = std::ceil(1.1f));
   }
 }
 
 static void fm_max(benchmark::State& state) {
+  float x;
   for (auto _ : state) {
-    auto x = fmath::max(1, 2);
+    benchmark::DoNotOptimize(x = fmath::max(1, 2));
   }
 }
 
 static void std_max(benchmark::State& state) {
+  float x;
   for (auto _ : state) {
-    auto x = std::max(1, 2);
+    benchmark::DoNotOptimize(x = std::max(1, 2));
   }
 }
 }

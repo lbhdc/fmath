@@ -7,14 +7,16 @@
 
 namespace fmath::bench {
 static void fm_sqrt(benchmark::State &state) {
+  float x;
   for (auto _ : state) {
-    auto x = fmath::sqrt(1.5f);
+    benchmark::DoNotOptimize(x = fmath::sqrt(1.5f));
   }
 }
 
 static void std_sqrt(benchmark::State &state) {
+  float x;
   for (auto _ : state) {
-    auto x = std::sqrt(1.5f);
+    benchmark::DoNotOptimize(x = std::sqrt(1.5f));
   }
 }
 }

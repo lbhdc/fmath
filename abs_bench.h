@@ -7,16 +7,18 @@
 
 namespace fmath::bench {
 static void fm_abs(benchmark::State& state) {
+  int x;
   for (auto _ : state) {
-    auto x = fmath::abs(1234);
+    benchmark::DoNotOptimize(x = fmath::abs(1234));
   }
 }
 
 static void std_abs(benchmark::State& state) {
+  int x;
   for (auto _ : state) {
-    auto x = std::abs(1234);
+    benchmark::DoNotOptimize(x = std::abs(1234));
   }
 }
 }
 
-#endif //FMATH_EXP_BENCH_H
+#endif //FMATH_ABS_BENCH_H

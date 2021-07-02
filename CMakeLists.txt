@@ -30,6 +30,12 @@ target_link_libraries(bencher ${bench_deps})
 target_link_libraries(tester ${test_deps})
 
 # [ flags ] ===================================================================-
+if(COMPILER_SUPPORTS_MARCH_NATIVE)
+    set(CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS} -march=native)
+endif()
+if(CMAKE_BUILD_TYPE MATCHES Release)
+    set(CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS} -O3)
+endif()
 set(warnings -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wold-style-cast
     -Wcast-align -Wunused -Woverloaded-virtual -Wpedantic -Wconversion
     -Wsign-conversion -Wnull-dereference -Wdouble-promotion -Wformat=2

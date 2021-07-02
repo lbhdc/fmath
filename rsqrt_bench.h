@@ -7,26 +7,30 @@
 
 namespace fmath::bench {
 static void fm_rsqrt(benchmark::State &state) {
+  float x;
   for (auto _ : state) {
-    auto x = fmath::rsqrt(1.5f);
+    benchmark::DoNotOptimize(x = fmath::rsqrt(1.5f));
   }
 }
 
 static void fm_rsqrt_lomont(benchmark::State &state) {
+  float x;
   for (auto _ : state) {
-    auto x = fmath::rsqrt_lomont(1.5f);
+    benchmark::DoNotOptimize(x = fmath::rsqrt_lomont(1.5f));
   }
 }
 
 static void fm_rsqrt_quake(benchmark::State &state) {
+  float x;
   for (auto _ : state) {
-    auto x = fmath::rsqrt_quake(1.5f);
+    benchmark::DoNotOptimize(x = fmath::rsqrt_quake(1.5f));
   }
 }
 
 static void std_rsqrt(benchmark::State &state) {
+  float x;
   for (auto _ : state) {
-    auto x = 1 / std::sqrt(1.5f);
+    benchmark::DoNotOptimize(x = 1 / std::sqrt(1.5f));
   }
 }
 }
